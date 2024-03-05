@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph">
+
+    <activity
+        android:id="@+id/MainActivity"
+        android:name="com.example.blankapplication.MainActivity"
+        tools:layout="@layout/activity_main">
+        <action
+            android:id="@+id/main_activity_to_conversation_activity"
+            app:destination="@id/ConversationActivity" />
+    </activity>
+
+    <activity
+        android:id="@+id/ConversationActivity"
+        android:name="com.example.blankapplication.ConversationActivity"
+        tools:layout="@layout/activity_conversation">
+    </activity>
+</navigation>

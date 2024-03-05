@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    android:paddingTop="10dp"
+    android:paddingRight="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dateTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="04/26/2023 @ 4:34pm"
+            android:textAlignment="center"
+             />
+
+        <TextView
+            android:id="@+id/sender"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="0"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Generic Name"
+            android:textAlignment="viewEnd"
+            android:textColor="#B19470"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="277dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="0"
+
+            android:text="Your mom says hello. Let me know If to hi bye cu li mi sow by the mino low si si sis iswould like to reply! Random text. More completely random but semi relevent text. Keep it comin."
+
+            android:textAlignment="textStart"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:paddingTop="0dp"
+    tools:context=".ConversationActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefreshMessages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_weight="1"
+        android:background="#FFFFFF">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/messages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="30dp" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <!-- New Layout at the bottom -->
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/messageInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_background"
+            android:fadeScrollbars="false"
+            android:hint="Type a message..."
+
+            android:inputType="textMultiLine"
+            android:maxLines="7"
+            android:padding="5dp"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+            android:textColor="#1B1A1A"
+            android:textColorHint="#747272"
+            android:verticalScrollbarPosition="defaultPosition" />
+
+        <Button
+            android:id="@+id/sendButton"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rotate_button_background"
+            android:gravity="center_horizontal|center_vertical"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:textColor="@color/black"
+            android:textColorHighlight="#D93B3B"
+            android:textColorHint="#D28585"
+            android:textColorLink="#CC1A1A"
+            app:icon="@android:drawable/ic_menu_send"
+            app:strokeColor="#8B4646" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ConversationActivity"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Sender's message bubbles -->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end">
+
+                <TextView
+                    android:id="@+id/senderMessage1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sender_message_background"
+                    android:padding="10dp"
+                    android:text="Hello, how are you?"
+                    android:textColor="#FFFFFF"/>
+
+                <TextView
+                    android:id="@+id/senderMessage2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sender_message_background"
+                    android:padding="10dp"
+                    android:text="I'm good, thanks!"
+                    android:textColor="#FFFFFF"
+                    android:layout_below="@id/senderMessage1"/>
+
+                <!-- Add more sender message bubbles as needed -->
+
+            </RelativeLayout>
+
+            <!-- Receiver's message bubbles -->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start">
+
+                <TextView
+                    android:id="@+id/receiverMessage1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/receiver_message_background"
+                    android:padding="10dp"
+                    android:text="Hi there!"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:id="@+id/receiverMessage2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/receiver_message_background"
+                    android:padding="10dp"
+                    android:text="How's it going?"
+                    android:textColor="#000000"
+                    android:layout_below="@id/receiverMessage1"/>
+
+                <!-- Add more receiver message bubbles as needed -->
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--<include layout="@layout/content_conversation" />-->
+
+</LinearLayout>

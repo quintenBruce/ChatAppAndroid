@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/dateTime"
+        android:text="04/26/2023 @ 4:34pm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/sender"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Solo Chat with Friendships"
+        android:textColor="#787296"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="277dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:text="Hello, how are you? It Is Monday now and I came. to work. Relunctantly, because I am no worker bee. I am a human being."
+        android:textAlignment="textStart"
+
+
+        android:textSize="16sp" />
+
+</LinearLayout>
